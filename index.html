@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love Arcade 💜💙</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🔐 LOGIN -->
+<div id="login">
+  <h1>💜 For My Babi 💙</h1>
+
+  <input id="pass" type="password" placeholder="Enter password...">
+  <button onclick="unlock()">Unlock 💖</button>
+
+  <p id="msg"></p>
+  <p id="hint"></p>
+</div>
+
+<!-- 🎮 MAIN APP -->
+<div id="main" class="hidden">
+
+  <h1 class="title">💜 Love Arcade 💙</h1>
+
+  <div class="menu">
+    <button onclick="openSection('wheel')">🎡 Wheel</button>
+    <button onclick="openSection('heart')">💜 Hearts</button>
+    <button onclick="openSection('told')">💬 Truth / Dare</button>
+    <button onclick="openSection('love')">💖 Why I Love You</button>
+  </div>
+
+  <div id="panel" class="panel hidden">
+
+    <button onclick="closePanel()">✖</button>
+
+    <!-- 🎡 WHEEL -->
+    <div id="wheelSection" class="content hidden">
+      <h2>🎡 Spin My Wheel Being 💜</h2>
+
+      <div id="wheel"></div>
+      <button onclick="spinWheel()">SPIN 💫</button>
+
+      <h1 id="wheelResult"></h1>
+    </div>
+
+    <!-- 💜 HEART GAME -->
+    <div id="heartSection" class="content hidden">
+      <h2>💜 Heart Catch</h2>
+
+      <div id="loveBar"><div id="loveFill"></div></div>
+
+      <p>Score: <span id="score">0</span></p>
+
+      <div id="heartArea"></div>
+    </div>
+
+    <!-- 💬 TRUTH OR DARE -->
+    <div id="toldSection" class="content hidden">
+
+      <h2>💬 Truth or Love Dare 💘</h2>
+
+      <button onclick="pickTruth()">💬 Truth</button>
+      <button onclick="pickDare()">💘 Love Dare</button>
+
+      <h1 id="toldResult"></h1>
+    </div>
+
+    <!-- 💖 WHY I LOVE YOU -->
+    <div id="loveSection" class="content hidden">
+      <h2>💖 Why I Love You</h2>
+
+      <div class="love">
+        God-fearing 💜 Faithful 💙 Kind 💜 Smart 💙 Talented 💜 Very Gwapoo 💙<br><br>
+        You support me always 💜<br>
+        You make me feel special 💙<br>
+        You are patient with me 💜<br>
+        You make me feel safe 💙<br>
+        You care more than I do 💜<br>
+        You being yourself… pinaka love nako 💙
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 💥 OVERLAY -->
+<div id="overlay" class="hidden">
+  <div id="overlayText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
